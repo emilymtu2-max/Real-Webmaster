@@ -1,0 +1,263 @@
+/*HEADER*/ 
+
+/* Header wrapper */
+
+.site-header {
+  background: #4E0B04;
+  height: 89.37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: 'Kumb Sans', sans-serif;
+}
+
+/* Inner navbar container */
+.site-header .navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* Logo */
+#navbar__logo {
+  color: #FFC15E;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+/* Menu */
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+/* Links */
+.navbar__menu a {
+  color: #FBC52A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar__menu a:hover {
+  color: #af8a23;
+  transition: all 0.3s ease;
+}
+
+
+/* map.css */
+
+body {
+  margin: 0;
+  background-color: #6A0909;
+  font-family: Arial, sans-serif;
+}
+
+/* optional styling for maps */
+
+h1{
+    color: #FFC15E;
+  text-align: center;
+}
+h2 {
+  color: #550303;
+  text-align: center;
+}
+.map-box {
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #FFC15E;
+  padding: 15px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* let the iframe size itself inside the padding */
+.map-box iframe {
+  width: 100%;
+  height: 350px;   /* set height here */
+  border: 0;
+  border-radius: 8px;
+  display: block;  /* removes inline spacing */
+}
+/* ====== LAYOUT ====== */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar {
+  width: 240px;
+  background-color: #F6DCB1;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Sidebar title */
+.sidebar h3 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #550303;
+  margin: 0;
+}
+
+/* Sidebar links container (optional but clean) */
+.sidebar a {
+  position: relative;          /* REQUIRED for divider lines */
+  display: block;
+  text-decoration: none;
+  color: #550303;
+  font-weight: 500;
+  padding: 12px 16px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.sidebar a:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(85, 3, 3, 0.25);
+}
+
+/* Hover effect (ChatGPT-ish) */
+.sidebar a:hover {
+  background-color: #FFC15E;
+  transform: translateX(4px);
+}
+
+/* ====== MAIN CONTENT ====== */
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.site-footer {
+  background-color: #F6DEB3;
+  padding: 5vh 3vw;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #4E0B04;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Left side */
+.footer-left p {
+  margin: 10px 0;
+  font-size: 16px;
+  padding-left: 0;
+}
+
+.contact-btn {
+  background: #FFC15E;
+  color: #550303;
+  border: 0 !important;
+  outline: 0 !important;
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent;
+
+  border-radius: 8px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-top: auto;
+  align-self: flex-start;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.contact-btn:hover,
+.contact-btn:focus,
+.contact-btn:active {
+  outline: none;
+  text-decoration: none;
+  transform: scale(1.05);
+  background: #E19C4D; 
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.footer-created {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/*right side*/
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+.footer-links a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #4E0B04;
+  margin-left: 2vw;
+}
+
+.footer-logo {
+  margin-top: auto; /* 👈 pushes logo to bottom */
+  width: 140px;
+  height: auto;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+/* Logo image */
+.footer-logo {
+  width: 140px;
+  height: auto;
+}
+
+.image-container {
+    width: 400px;
+}
+
+.page-marginleft {
+    margin-left: 10vw;
+}
+
+.section-title p {
+    text-align: center;
+    font-size: 25px;
+}

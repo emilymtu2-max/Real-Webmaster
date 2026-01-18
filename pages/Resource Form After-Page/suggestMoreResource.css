@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumb Sans', sans-serif;
+    
+}
+
+* p {
+    font-size: 20px;
+    padding-left: 5vw;
+}
+
+* h1 {
+    font-size: 97.79px;
+    padding-left: 5vw;
+}
+
+/*index on top*/
+.index a{
+    text-decoration: none;
+    color:#FBC52A;
+}
+
+.index__container{
+    color:#FBC52A;
+    height: 20px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 5vw;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.index{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: left;
+    gap: 10px;
+}
+
+/*Suggest More Resource page*/
+.suggestMoreResource{
+    background: 
+    linear-gradient(rgb(78, 11, 4, 0.35), rgb(78, 11, 4, 0.35))
+    ,url('/images/india.jpg');
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-position: center;
+    color: #F6DFC0;
+
+}
+
+.suggestMoreResource__headline p {
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+}
+
+/* Header wrapper */
+
+.site-header {
+  background: #4E0B04;
+  height: 89.37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: 'Kumb Sans', sans-serif;
+}
+
+/* Inner navbar container */
+.site-header .navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* Logo */
+#navbar__logo {
+  color: #FFC15E;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+/* Menu */
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+/* Links */
+.navbar__menu a {
+  color: #FBC52A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar__menu a:hover {
+  color: #af8a23;
+  transition: all 0.3s ease;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.site-footer {
+  background-color: #F6DEB3;
+  padding: 5vh 3vw;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #4E0B04;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Left side */
+.footer-left p {
+  margin: 10px 0;
+  font-size: 16px;
+  padding-left: 0;
+}
+
+.contact-btn {
+  background: #FFC15E;
+  color: #550303;
+  border: 0 !important;
+  outline: 0 !important;
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent;
+
+  border-radius: 8px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-top: auto;
+  align-self: flex-start;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.contact-btn:hover,
+.contact-btn:focus,
+.contact-btn:active {
+  outline: none;
+  text-decoration: none;
+  transform: scale(1.05);
+  background: #E19C4D; 
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.footer-created {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/*right side*/
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+.footer-links a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #4E0B04;
+  margin-left: 2vw;
+}
+
+.footer-logo {
+  margin-top: auto; /* 👈 pushes logo to bottom */
+  width: 140px;
+  height: auto;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+/* Logo image */
+.footer-logo {
+  width: 140px;
+  height: auto;
+}
+
+.image-container {
+    width: 400px;
+}
+
+.page-marginleft {
+    margin-left: 10vw;
+}
+
+.section-title p {
+    text-align: center;
+    font-size: 25px;
+}

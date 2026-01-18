@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggest More Resources | PulseAsia</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="suggestions.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="navbar__container">
+            <a href="/index.html" id="navbar__logo">Pulse Asia</a>    
+            <ul class="navbar__menu">
+                <li><a href="../aboutus/aboutus.html">About Us</a></li>
+                <li><a href="../resourcesPage/resources.html">Resource Hub</a></li>
+                <li><a href="../topthreeresources/topthreeresources.html">Top Three Resources</a></li>
+                <li><a href="../suggestions/suggestions.html">Suggestions</a></li>
+                <li><a href="../references/references.html">References</a></li>
+                <li><a href ="../interactiveMap/map.html">Interactive Maps</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="suggestions-page">
+        <div class="suggestions-container">
+            <h4 class="suggestions-loc">Home / Resource Hub / Suggest More Resources</h4>
+            <h1 class="suggestions-title">Suggest More <br> Resources</h1>
+            <h3 class="suggestions-subText">Do you have any resources/organizations that you'd like us to put on <br> our resource hub?</h3>
+        </div>
+
+        <!-- Single form for Google Sheets logging -->
+        <form id="resourceForm">
+    <div class="two-column-form">
+        <div class="input-box">
+            <input type="text" name="firstName" placeholder="First Name">
+        </div>
+        <div class="input-box">
+            <input type="text" name="lastName" placeholder="Last Name">
+        </div>
+        <div class="input-box">
+            <input type="text" name="phoneNumber" placeholder="Phone Number">
+        </div>
+        <div class="input-box">
+            <input type="email" name="emailAddress" placeholder="Email Address">
+        </div>
+
+        <div class="thick-input-box">
+            <input type="text" name="resourceLocation" placeholder="Where did you find the resource?">
+        </div>
+
+        <div class="thick-input-box">
+            <input type="text" name="resourceLink" placeholder="Paste source's link here~ If not available, describe the source">
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Form</button>
+    </div>
+</form>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="mailto:moodyxoreo@gmail.com" class="contact-btn">Contact Us:</a>
+                <p>Email: info@pulseasia.com</p>
+                <p>Phone: 425-471-4324</p>
+                <p class="footer-created">
+                    Created by students of:<br />
+                    Lake Washington High School<br />
+                    12033 NE 80th St, Kirkland, WA 98033
+                </p>
+                <p class="footer-copyright">
+                    ©2025 Pulse Asia. All Rights Reserved.
+                </p>
+            </div>
+            <div class="footer-right">
+                <nav class="footer-links">
+                    <a href="/pages/resourcesPage/resources.html">Resource Hub</a>
+                    <a href="/pages/aboutus/aboutus.html">About Us</a>
+                    <a href="/pages/suggestions/suggestions.html">Suggestions</a>
+                </nav>
+                <img src="/images/PULSEASIALOGO.png" alt="Pulse Asia Logo" class="footer-logo"/>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById("resourceForm");
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            fetch("https://script.google.com/macros/s/AKfycbwPx4eaTir8OBJgUVdJ8I6Yusi1mJ8c9PD-dwdMV3xdVP3NDBNBjQXtw7SUiBX6dNntpg/exec", {
+                method: "POST",
+                body: new URLSearchParams(new FormData(form))
+            })
+            .then(response => {
+                if(response.ok){
+                    alert("Form submitted successfully!");
+                    window.location.href = "../Resource Form After-Page/afterform.html";
+                } else {
+                    alert("Error submitting form. Try again later.");
+                }
+            })
+            .catch(error => alert("Error submitting form. Check console."));
+        });
+    </script>
+</body>
+</html>
